@@ -1,16 +1,21 @@
 
 import './App.css'
-import { BrowserRouter, Router, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import LearnUseEffect from './pages/LearnUseEffect'
-
+import  {Home}  from './pages/Home'
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
-        <Route path="/learn-useeffect" element={<LearnUseEffect />} />
-
+        <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/learn-useeffect"
+          element={<LearnUseEffect />}
+        />
+      </Routes>
 
       </BrowserRouter>
 
